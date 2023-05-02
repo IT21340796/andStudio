@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "402379957405",
+    "project_id": "cash-returning-system",
+    "storage_bucket": "cash-returning-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402379957405:android:401cefe6a387c1aafbe074",
+        "android_client_info": {
+          "package_name": "com.example.cashreturningsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402379957405-1qcl6b04v517jl2639ojvle41gfaje4m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARthf0bpP47c-11IdK8ktVmJoKt7Mmhhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402379957405-1qcl6b04v517jl2639ojvle41gfaje4m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
