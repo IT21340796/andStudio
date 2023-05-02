@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "402379957405",
+    "firebase_url": "https://cash-returning-system-default-rtdb.firebaseio.com",
     "project_id": "cash-returning-system",
     "storage_bucket": "cash-returning-system.appspot.com"
   },
