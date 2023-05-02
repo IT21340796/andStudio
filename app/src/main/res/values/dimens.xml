@@ -6,7 +6,7 @@
     <dimen name="headingHeight">58dp</dimen>
     <!--text Inputs-->
     <dimen name="inputTextWidth">367dp</dimen>
-    <dimen name="inputTextHeight">49dp</dimen>
+    <dimen name="inputTextHeight">55dp</dimen>
     <!--Buttons-->
     <dimen name="btnLayoutWidth">120dp</dimen>
     <dimen name="btnLayoutHeight">54dp</dimen>
@@ -21,4 +21,6 @@
     <dimen name="inputTextStart_End">1dp</dimen>
     <dimen name="inputTextTop_Bottom">8dp</dimen>
     <dimen name="CardMarginBottom"> 16dp</dimen>
+    <dimen name="input_value_height">49dp</dimen>
+    <dimen name="input_value_width">323dp</dimen>
 </resources>

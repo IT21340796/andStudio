@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightGold"
@@ -36,28 +37,20 @@
                 app:cardElevation="5dp">
 
                 <!--paw ID text layout-->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/PawID1"
-                    android:layout_width="330dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/edit_text">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pawID1"
-                        android:layout_width="280dp"
-                        android:layout_height="47dp"
-                        android:layout_marginStart="20dp"
-                        android:background="@drawable/edit_text"
-                        android:hint="@string/paw_ID"
-                        android:textColorHint="@color/navyBlue" />
-
-                </com.google.android.material.textfield.TextInputLayout>
 
                 <!--Cash Amount text layout-->
+
+                <TextView
+                    android:id="@+id/pid1"
+                    android:layout_width="330dp"
+                    android:layout_height="46dp"
+                    android:background="@drawable/edit_text"
+                    android:color="@color/navyBlue"
+                    android:gravity="center"
+                    android:text="@string/paw_ID"
+                    tools:layout_marginLeft="23dp"
+                    tools:layout_marginTop="30dp" />
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/CashID2"
                     android:layout_width="330dp"
@@ -124,26 +117,17 @@
                 app:cardElevation="5dp">
 
                 <!--paw ID text layout-->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/PawID2"
+                <TextView
+                    android:id="@+id/pid2"
                     android:layout_width="330dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/edit_text">
+                    android:layout_height="46dp"
+                    android:background="@drawable/edit_text"
+                    android:color="@color/navyBlue"
+                    android:gravity="center"
+                    android:text="@string/paw_ID"
+                    tools:layout_marginLeft="23dp"
+                    tools:layout_marginTop="30dp" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pawID2"
-                        android:layout_width="280dp"
-                        android:layout_height="47dp"
-                        android:layout_marginStart="20dp"
-                        android:background="@drawable/edit_text"
-                        android:hint="@string/paw_ID"
-                        android:textColorHint="@color/navyBlue" />
-
-                </com.google.android.material.textfield.TextInputLayout>
 
                 <!--Cash Amount text layout-->
                 <com.google.android.material.textfield.TextInputLayout
@@ -213,26 +197,17 @@
                 app:cardElevation="5dp">
 
                 <!--paw ID text layout-->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/PawID3"
+
+                <TextView
+                    android:id="@+id/pid3"
                     android:layout_width="330dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/edit_text">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/pawID3"
-                        android:layout_width="280dp"
-                        android:layout_height="47dp"
-                        android:layout_marginStart="20dp"
-                        android:background="@drawable/edit_text"
-                        android:hint="@string/paw_ID"
-                        android:textColorHint="@color/navyBlue" />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="46dp"
+                    android:background="@drawable/edit_text"
+                    android:color="@color/navyBlue"
+                    android:gravity="center"
+                    android:text="@string/paw_ID"
+                    tools:layout_marginLeft="23dp"
+                    tools:layout_marginTop="30dp" />
 
                 <!--Cash Amount text layout-->
                 <com.google.android.material.textfield.TextInputLayout

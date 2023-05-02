@@ -38,8 +38,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="388dp"
-            android:layout_height="469dp"
+            android:layout_width="390dp"
+            android:layout_height="475dp"
             android:layout_marginStart="11dp"
             android:layout_marginEnd="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,19 +49,18 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/PawID"
-            android:layout_width="367dp"
-            android:layout_height="49dp"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="10dp"
             android:background="@drawable/edit_text"
             app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="@+id/imageView2">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/pawID"
-                android:layout_width="323dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="3dp"
                 android:background="#00FFFFFF"
@@ -71,9 +70,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/FullName"
-            android:layout_width="367dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edit_text"
             app:layout_constraintEnd_toEndOf="@+id/imageView2"
             app:layout_constraintStart_toStartOf="@+id/imageView2"
@@ -81,8 +80,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/fullName"
-                android:layout_width="323dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="3dp"
                 android:background="#00FFFFFF"
@@ -93,9 +92,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Email"
-            android:layout_width="367dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edit_text"
             app:layout_constraintEnd_toEndOf="@+id/imageView2"
             app:layout_constraintStart_toStartOf="@+id/imageView2"
@@ -103,8 +102,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email"
-                android:layout_width="323dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="3dp"
                 android:background="#00FFFFFF"
@@ -114,9 +113,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/Phone"
-            android:layout_width="367dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edit_text"
             app:layout_constraintEnd_toEndOf="@+id/imageView2"
             app:layout_constraintStart_toStartOf="@+id/imageView2"
@@ -124,8 +123,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/phone"
-                android:layout_width="323dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="3dp"
                 android:background="#00FFFFFF"
@@ -136,9 +135,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/CashAmount"
-            android:layout_width="367dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edit_text"
             app:layout_constraintEnd_toEndOf="@+id/imageView2"
             app:layout_constraintStart_toStartOf="@+id/imageView2"
@@ -146,8 +145,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/cash"
-                android:layout_width="323dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="3dp"
                 android:background="#00FFFFFF"
@@ -158,9 +157,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/DateToCollect"
-            android:layout_width="367dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="@dimen/inputTextWidth"
+            android:layout_height="@dimen/inputTextHeight"
+            android:layout_marginTop="8dp"
             android:background="@drawable/edit_text"
             app:layout_constraintEnd_toEndOf="@+id/imageView2"
             app:layout_constraintStart_toStartOf="@+id/imageView2"
@@ -168,8 +167,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/date"
-                android:layout_width="323dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/input_value_width"
+                android:layout_height="@dimen/input_value_height"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="3dp"
                 android:background="#00FFFFFF"
