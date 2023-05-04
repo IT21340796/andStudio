@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView1"
+    android:layout_width="362dp"
+    android:layout_height="270dp"
+    android:layout_margin="16dp"
+    android:background="@drawable/big_rectangle"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nicText"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/NIC"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/nic"
+            android:layout_width="330dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text"
+            android:color="@color/navyBlue"
+            android:gravity="center"
+            android:text="@string/NIC" />
+
+        <TextView
+            android:id="@+id/cashText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/cashAmount"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/cash"
+            android:layout_width="330dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_text"
+            android:color="@color/navyBlue"
+            android:gravity="center"
+            android:text="@string/cashAmount" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Update1"
+                android:layout_width="120dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/navyBlue"
+                android:text="@string/Update"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/Delete1"
+                android:layout_width="120dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/navyBlue"
+                android:text="@string/Delete"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+                app:layout_constraintEnd_toStartOf="@+id/Cancel"
+                app:layout_constraintTop_toBottomOf="@+id/DateToCollect" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

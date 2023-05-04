@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "503963777318",
+    "project_id": "cashreturn-8bcb9",
+    "storage_bucket": "cashreturn-8bcb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503963777318:android:21a2a997509e7dfd0969e7",
+        "android_client_info": {
+          "package_name": "com.example.cashreturningsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503963777318-v55ndafde9q1lum5mslpf3es9v65n4cl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQeMe8L8Pkfbv37Y8RDYxvUsOmapyWEXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "503963777318-v55ndafde9q1lum5mslpf3es9v65n4cl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
