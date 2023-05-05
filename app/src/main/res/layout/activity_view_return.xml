@@ -9,33 +9,7 @@
     android:backgroundTint="@color/lightGold">
 
 
-    <Button
-        android:id="@+id/Delete1"
-        android:layout_width="120dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="72dp"
-        android:backgroundTint="@color/navyBlue"
-        android:text="@string/Delete"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Update1" />
 
-    <Button
-        android:id="@+id/Update1"
-        android:layout_width="120dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="72dp"
-        android:backgroundTint="@color/navyBlue"
-        android:text="@string/Update"
-        android:textColor="@color/white"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
@@ -69,26 +43,28 @@
 
     <TextView
         android:id="@+id/fullName"
-        android:layout_width="229dp"
-        android:layout_height="34dp"
+        android:layout_width="@dimen/inputTextWidth"
+        android:layout_height="40dp"
         android:layout_marginStart="169dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="166dp"
-        android:background="@color/gold"
+        android:background="#FDC954"
+        android:text="@string/fullName"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/email"
-        android:layout_width="206dp"
-        android:layout_height="53dp"
+        android:layout_width="@dimen/inputTextWidth"
+        android:layout_height="40dp"
         android:layout_marginStart="112dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="113dp"
-        android:background="@color/gold"
+        android:background="#FDC954"
+        android:text="@string/email"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,10 +72,10 @@
 
     <TextView
         android:id="@+id/phone"
-        android:layout_width="216dp"
-        android:layout_height="41dp"
+        android:layout_width="@dimen/inputTextWidth"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:background="@color/gold"
+        android:background="#FDC954"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,10 +83,10 @@
 
     <TextView
         android:id="@+id/cashAmount"
-        android:layout_width="210dp"
-        android:layout_height="38dp"
+        android:layout_width="@dimen/inputTextWidth"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:background="@color/gold"
+        android:background="#FDC954"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,28 +94,58 @@
 
     <TextView
         android:id="@+id/csNIC"
-        android:layout_width="221dp"
-        android:layout_height="46dp"
+        android:layout_width="@dimen/inputTextWidth"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="140dp"
-        android:background="@color/gold"
+        android:layout_marginBottom="64dp"
+        android:background="#FDC954"
+        android:text="@string/NIC"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/Update1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateCollect" />
+        app:layout_constraintTop_toBottomOf="@+id/dateToCollect"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/dateToCollect"
-        android:layout_width="216dp"
-        android:layout_height="44dp"
+        android:layout_width="@dimen/inputTextWidth"
+        android:layout_height="40dp"
         android:layout_marginTop="8dp"
-        android:background="@color/gold"
+        android:background="#FDC954"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <Button
+        android:id="@+id/Delete1"
+        android:layout_width="120dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/navyBlue"
+        android:text="@string/Delete"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Update1"
+        app:layout_constraintTop_toBottomOf="@+id/csNIC"
+        app:layout_constraintVertical_bias="0.762" />
+
+    <Button
+        android:id="@+id/Update1"
+        android:layout_width="120dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/navyBlue"
+        android:text="@string/Update"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

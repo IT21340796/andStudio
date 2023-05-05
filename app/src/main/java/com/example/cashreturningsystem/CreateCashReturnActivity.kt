@@ -8,7 +8,7 @@ import com.example.cashreturningsystem.databinding.ActivityCreateReturnBinding
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class MainActivity:AppCompatActivity() {
+class CreateCashReturnActivity:AppCompatActivity() {
 
     private lateinit var binding: ActivityCreateReturnBinding
     private lateinit var database: DatabaseReference
@@ -22,7 +22,7 @@ class MainActivity:AppCompatActivity() {
 
         binding.cancelBtn2.setOnClickListener {
 
-            val i = Intent(this@MainActivity, viewAllReturns::class.java)
+            val i = Intent(this@CreateCashReturnActivity, viewAllReturns::class.java)
             startActivity(i)
         }
 
@@ -47,7 +47,7 @@ class MainActivity:AppCompatActivity() {
 
                 Toast.makeText(this, "Successfuly Saved", Toast.LENGTH_LONG).show()
 
-                val i = Intent(this@MainActivity, viewAllReturns::class.java)
+                val i = Intent(this@CreateCashReturnActivity, viewAllReturns::class.java)
                 startActivity(i)
             }.addOnFailureListener {
                 Toast.makeText(applicationContext, "Failed", Toast.LENGTH_LONG).show()

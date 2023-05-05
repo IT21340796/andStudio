@@ -15,13 +15,13 @@
             android:name=".viewAllReturns"
             android:exported="false" />
         <activity
-            android:name=".viewReturn"
+            android:name=".ActivityViewReturn"
             android:exported="false" />
         <activity
             android:name=".CreateReturn"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".CreateCashReturnActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

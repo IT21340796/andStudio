@@ -11,9 +11,11 @@ import java.text.FieldPosition
 
 class viewAllReturns : AppCompatActivity() {
 
-    private lateinit var  dhref : DatabaseReference
+    private lateinit var dhref: DatabaseReference
     private lateinit var returnRecyclerView: RecyclerView
-    private lateinit var returnArrayList: ArrayList<CashReturnModel>
+    private lateinit var returnList: ArrayList<CashReturnModel>
+
+    private lateinit var returnAdapter: MyAdaptor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,30 +25,46 @@ class viewAllReturns : AppCompatActivity() {
         returnRecyclerView.layoutManager = LinearLayoutManager(this)
         returnRecyclerView.setHasFixedSize(true)
 
-        returnArrayList = arrayListOf<CashReturnModel>()
+        returnList = arrayListOf<CashReturnModel>()
         getReturnData()
 
     }
-    private fun getReturnData()
-    {
+
+    private fun getReturnData() {
         dhref = FirebaseDatabase.getInstance().getReference("CashReturn")
 
-        dhref.addValueEventListener(object:ValueEventListener{
-
+        dhref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (userSnapshot in snapshot.children) {
 
                         val ret = userSnapshot.getValue(CashReturnModel::class.java)
-                        returnArrayList.add(ret!!)
+                        returnList.add(ret!!)
+                    }
+
+                    returnAdapter = MyAdaptor(returnList)
+                    returnRecyclerView.adapter = MyAdaptor(returnList)
+                    returnRecyclerView.adapter = returnAdapter
+
+                    returnAdapter.onItemClick = {
+                        val intent = Intent(this@viewAllReturns, ActivityViewReturn::class.java )
+                        intent.putExtra("fullName",it)
+                        intent.putExtra("email",it)
+                        intent.putExtra("phone",it)
+                        intent.putExtra("csNIC",it)
+                        intent.putExtra("cashAmount",it)
+                        intent.putExtra("dateToCollect",it)
+                        startActivity(intent)
+
 
                     }
-                    returnRecyclerView.adapter = MyAdaptor(returnArrayList)
                 }
             }
+
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
         })
     }
+
 }
