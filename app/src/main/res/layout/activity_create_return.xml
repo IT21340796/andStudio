@@ -11,7 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="602dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,7 +127,7 @@
             app:startIconDrawable="@drawable/baseline_attach_money_24">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/cash"
+                android:id="@+id/cashAmount"
                 android:layout_width="@dimen/input_value_width"
                 android:layout_height="@dimen/input_value_height"
                 android:layout_marginStart="20dp"
@@ -137,28 +137,6 @@
                 android:textColorHint="@color/navyBlue" />
 
         </com.google.android.material.textfield.TextInputLayout>
-        <!--
-               <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/DateToCollect"
-                    android:layout_width="@dimen/inputTextWidth"
-                    android:layout_height="@dimen/inputTextHeight"
-                    android:layout_marginTop="8dp"
-                    android:background="@drawable/edit_text"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                    app:layout_constraintStart_toStartOf="@+id/imageView2"
-                    app:layout_constraintTop_toBottomOf="@+id/CashAmount">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/date"
-                        android:layout_width="@dimen/input_value_width"
-                        android:layout_height="@dimen/input_value_height"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="3dp"
-                        android:background="#00FFFFFF"
-                        android:hint="@string/date_to_collect_your_pawn_item"
-                        android:textColorHint="@color/navyBlue" />
-                </com.google.android.material.textfield.TextInputLayout>
-        -->
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nic"
@@ -172,7 +150,7 @@
             app:layout_constraintTop_toBottomOf="@+id/CashAmount">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/NIC"
+                android:id="@+id/csNIC"
                 android:layout_width="@dimen/input_value_width"
                 android:layout_height="@dimen/input_value_height"
                 android:layout_marginStart="20dp"
@@ -195,7 +173,7 @@
             app:layout_constraintTop_toBottomOf="@+id/nic">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/dateCollect"
+                android:id="@+id/dateToCollect"
                 android:layout_width="@dimen/input_value_width"
                 android:layout_height="@dimen/input_value_height"
                 android:layout_marginStart="20dp"

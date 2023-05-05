@@ -15,7 +15,6 @@ class CreateCashReturnActivity:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_create)
 
         binding = ActivityCreateReturnBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -27,23 +26,24 @@ class CreateCashReturnActivity:AppCompatActivity() {
         }
 
         binding.payBtn1.setOnClickListener {
+
+            val csNIC = binding.csNIC.text.toString()
             val fName = binding.fullName.text.toString()
             val email = binding.email.text.toString()
             val phone = binding.phone.text.toString()
-            val cash = binding.cash.text.toString()
-            val csNIC = binding.NIC.text.toString()
-            val dateToCollect = binding.dateCollect.text.toString()
+            val cash = binding.cashAmount.text.toString()
+            val dateToCollect = binding.dateToCollect.text.toString()
 
             database = FirebaseDatabase.getInstance().getReference("CashReturn")
 
-            val cReturn = CashReturnModel(fName, email, phone, cash,csNIC,dateToCollect)
-            database.child(fName).setValue(cReturn).addOnSuccessListener {
+            val cReturn = CashReturnModel(csNIC,fName, email, phone, cash,dateToCollect)
+            database.child(csNIC).setValue(cReturn).addOnSuccessListener {
+                binding.csNIC.text?.clear()
                 binding.fullName.text?.clear()
                 binding.email.text?.clear()
                 binding.phone.text?.clear()
-                binding.cash.text?.clear()
-                binding.NIC.text?.clear()
-                binding.dateCollect.text?.clear()
+                binding.cashAmount.text?.clear()
+                binding.dateToCollect.text?.clear()
 
                 Toast.makeText(this, "Successfuly Saved", Toast.LENGTH_LONG).show()
 

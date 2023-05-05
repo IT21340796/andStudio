@@ -3,11 +3,11 @@ package com.example.cashreturningsystem
 import android.os.Parcel
 import android.os.Parcelable
 
-data class CashReturnModel(val fullName:String?=null,
+data class CashReturnModel(val csNIC:String?=null,
+                           val fullName:String?=null,
                            val email:String?=null,
                            val phone:String?=null,
                            val cashAmount:String?=null,
-                           val csNIC:String?=null,
                            val dateToCollect:String?=null):Parcelable{
     constructor(parcel: Parcel) : this(
         parcel.readString(),
@@ -20,11 +20,11 @@ data class CashReturnModel(val fullName:String?=null,
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(csNIC)
         parcel.writeString(fullName)
         parcel.writeString(email)
         parcel.writeString(phone)
         parcel.writeString(cashAmount)
-        parcel.writeString(csNIC)
         parcel.writeString(dateToCollect)
     }
 
@@ -42,5 +42,6 @@ data class CashReturnModel(val fullName:String?=null,
         }
     }
 
-
 }
+
+

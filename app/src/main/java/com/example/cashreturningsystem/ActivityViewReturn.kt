@@ -1,69 +1,168 @@
 package com.example.cashreturningsystem
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.example.cashreturningsystem.databinding.ActivityViewReturnBinding
+import com.google.firebase.database.FirebaseDatabase
 
 class ActivityViewReturn : AppCompatActivity() {
 
-    private lateinit var btnUpdate : Button
-    private lateinit var  btnDelete :Button
+    private lateinit var  csNic: TextView
+    private lateinit var  csName :TextView
+    private lateinit var csPhone : TextView
+    private lateinit var  csCash :TextView
+    private lateinit var csEmail : TextView
+    private lateinit var  csDate :TextView
+
+    private lateinit var binding : ActivityViewReturnBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_return)
 
-        btnUpdate.setOnClickListener {
+        binding = ActivityViewReturnBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.Update2.setOnClickListener {
             openUpdateDialog(
-                intent.getStringExtra("csNIC").toString() ,
-                intent.getStringExtra("fullName").toString(),
-                intent.getStringExtra("email").toString(),
-                intent.getStringExtra("phone").toString(),
-                intent.getStringExtra("cashAmount").toString(),
-                intent.getStringExtra("dateToCollect").toString()
 
+                intent.getStringExtra("csNIC").toString(),
+                intent.getStringExtra("fullName").toString()
 
+            )
+        }
+        binding.Delete1.setOnClickListener {
+            deleteReturn(
+                intent.getStringExtra("csNIC").toString()
             )
         }
 
 
         val cReturn = intent.getParcelableExtra<CashReturnModel>("csNIC")
         if(cReturn!=null){
-          val nIC :TextView = findViewById(R.id.csNIC)
-            val name :TextView = findViewById(R.id.fullName)
-            val phone :TextView = findViewById(R.id.phone)
-            val email :TextView = findViewById(R.id.email)
-            val cash :TextView = findViewById(R.id.cashAmount)
-            val dateCollect :TextView = findViewById(R.id.dateToCollect)
+          csNic = findViewById(R.id.csNIC)
+          csName= findViewById(R.id.fullName)
+          csPhone= findViewById(R.id.phone)
+          csEmail = findViewById(R.id.email)
+          csCash = findViewById(R.id.cashAmount)
+            csDate = findViewById(R.id.dateToCollect)
 
 
-            Toast.makeText(this,"NIC,${cReturn.fullName}",Toast.LENGTH_SHORT).show()
-
-            nIC.text = cReturn.csNIC
-            name.text = cReturn.fullName
-            email.text = cReturn.email
-            phone.text = cReturn.phone
-            cash.text = cReturn.cashAmount
-            dateCollect.text = cReturn.dateToCollect
-
+            csNic.text = cReturn.csNIC
+            csName.text = cReturn.fullName
+            csEmail.text = cReturn.email
+            csPhone.text = cReturn.phone
+            csCash.text = cReturn.cashAmount
+            csDate.text = cReturn.dateToCollect
         }
 
     }
     private fun openUpdateDialog(
         csNIC:String,
         fullName :String,
-        email :String,
-        phone: String,
-        cashAmount :String,
-        dateCollect: String
     ){
         val mDialog = AlertDialog.Builder(this)
         val inflater = layoutInflater
-        val mDialogView = inflater.inflate(R.layout.upda)
+        val mDialogView = inflater.inflate(R.layout.update_dialog_cash,null)
+
+        mDialog.setView(mDialogView)
+
+
+        val cRfullName = mDialogView.findViewById<EditText>(R.id.fullName)
+        val cREmail = mDialogView.findViewById<EditText>(R.id.email)
+        val cRphone = mDialogView.findViewById<EditText>(R.id.phone)
+        val cRNIC = mDialogView.findViewById<EditText>(R.id.csNIC)
+        val cRCashAmount = mDialogView.findViewById<EditText>(R.id.cashAmount)
+        val cRDateCollect = mDialogView.findViewById<EditText>(R.id.dateToCollect)
+
+        val btnUpdateView = mDialogView.findViewById<Button>(R.id.updateBtn1)
+
+
+
+        val cReturn = intent.getParcelableExtra<CashReturnModel>("csNIC")
+
+        cRNIC.setText(cReturn?.csNIC)
+        cRfullName.setText(cReturn?.fullName)
+        cREmail.setText(cReturn?.email)
+        cRphone.setText(cReturn?.phone)
+        cRCashAmount.setText(cReturn?.cashAmount)
+        cRDateCollect.setText(cReturn?.dateToCollect)
+
+
+        mDialog.setTitle("Updating $fullName Record")
+
+        val alertDialog = mDialog.create()
+        alertDialog.show()
+
+        Toast.makeText(this,"NIC,${cRfullName}",Toast.LENGTH_SHORT).show()
+
+        btnUpdateView.setOnClickListener {
+
+            updateReturnData(
+                cRNIC.text.toString(),
+                cRfullName.text.toString(),
+                cREmail.text.toString(),
+                cRphone.text.toString(),
+                cRCashAmount.text.toString(),
+                cRDateCollect.text.toString()
+
+            )
+            Toast.makeText(applicationContext,"Return Data Updated!",Toast.LENGTH_LONG).show()
+
+
+            csNic.text  = cRNIC.text.toString()
+            csName.text = cRfullName.text.toString()
+            csEmail.text = cREmail.text.toString()
+            csPhone.text = cRphone.text.toString()
+            csCash.text = cRCashAmount.text.toString()
+            csDate.text = cRDateCollect.text.toString()
+
+            alertDialog.dismiss()
+
+        }
+
 
     }
+    private fun deleteReturn(
+        csNIC:String
+    )
+    {
+        Toast.makeText(this,"delete $csNIC",Toast.LENGTH_SHORT).show()
+
+        val dbRef = FirebaseDatabase.getInstance().getReference("CashReturn").child(csNIC)
+        val mTask = dbRef.removeValue()
+
+        mTask.addOnSuccessListener {
+            Toast.makeText(this,"Return data Deleted",Toast.LENGTH_LONG).show()
+            val intent = Intent(this,ActivityViewReturn::class.java)
+            finish()
+            startActivity(intent)
+        }.addOnFailureListener { error->
+            Toast.makeText(this,"Deleting Error ${error.message}",Toast.LENGTH_LONG).show()
+
+        }
+    }
+
+
+    private fun updateReturnData(
+    csNIC:String,
+    csName:String,
+    csEmail:String,
+    csPhone:String,
+    csCash:String,
+    csDate:String
+){
+    val dbRef = FirebaseDatabase.getInstance().getReference("CashReturn").child(csNIC)
+    val ReturnInfo = CashReturnModel(csNIC,csName,csEmail,csPhone,csCash,csDate)
+    dbRef.setValue(ReturnInfo)
+
+
+}
 
 }

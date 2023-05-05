@@ -9,7 +9,183 @@
     android:backgroundTint="@color/lightGold">
 
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="550dp"
+        app:barrierMargin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="288dp"
+                android:layout_height="63dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/be_vietnam_bold"
+                android:text="@string/View_Return"
+                android:textColor="@color/navyBlue"
+                android:textSize="40sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/NicText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/NIC"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/csNIC"
+                android:layout_width="@dimen/inputTextWidth"
+                android:layout_height="40dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/edit_text"
+                android:text=""
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/fullName"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/edit_text"
+                android:text=""
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/email"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/edit_text"
+                android:text=""
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/phoneText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/phone"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/edit_text"
+                android:text=""
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/cashText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/cashAmount"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/cashAmount"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/edit_text"
+                android:text=""
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/date_to_collect_your_pawn_item"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/dateToCollect"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:background="@drawable/edit_text"
+                android:text=""
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/Update2"
+                    android:layout_width="120dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/navyBlue"
+                    android:text="@string/Update"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/Delete1"
+                    android:layout_width="120dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/navyBlue"
+                    android:text="@string/Delete"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
@@ -19,133 +195,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_menu" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="288dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/be_vietnam_bold"
-        android:text="@string/View_Return"
-        android:textColor="@color/navyBlue"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.13"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184">
-
-    </TextView>
-
-    <TextView
-        android:id="@+id/fullName"
-        android:layout_width="@dimen/inputTextWidth"
-        android:layout_height="40dp"
-        android:layout_marginStart="169dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="166dp"
-        android:background="#FDC954"
-        android:text="@string/fullName"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="@dimen/inputTextWidth"
-        android:layout_height="40dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="113dp"
-        android:background="#FDC954"
-        android:text="@string/email"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
-
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="@dimen/inputTextWidth"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:background="#FDC954"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cashAmount" />
-
-    <TextView
-        android:id="@+id/cashAmount"
-        android:layout_width="@dimen/inputTextWidth"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:background="#FDC954"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fullName" />
-
-    <TextView
-        android:id="@+id/csNIC"
-        android:layout_width="@dimen/inputTextWidth"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="64dp"
-        android:background="#FDC954"
-        android:text="@string/NIC"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/Update1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dateToCollect"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/dateToCollect"
-        android:layout_width="@dimen/inputTextWidth"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:background="#FDC954"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
-
-    <Button
-        android:id="@+id/Delete1"
-        android:layout_width="120dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/navyBlue"
-        android:text="@string/Delete"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/Update1"
-        app:layout_constraintTop_toBottomOf="@+id/csNIC"
-        app:layout_constraintVertical_bias="0.762" />
-
-    <Button
-        android:id="@+id/Update1"
-        android:layout_width="120dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="40dp"
-        android:backgroundTint="@color/navyBlue"
-        android:text="@string/Update"
-        android:textColor="@color/white"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
